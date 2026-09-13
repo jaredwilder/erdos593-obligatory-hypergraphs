@@ -1,0 +1,37 @@
+SNAPSHOT of https://arxiv.org/abs/2606.24882 -- AN UNADJUDICATED RESOLUTION CLAIM.
+Eric Li, 'A Resolution of Erdos Problems 593 and 1177', v1 23 Jun 2026, v2 23 Jul 2026.
+retrieved 2026-09-05 by curl.
+STATUS IN THIS CAMPAIGN: NOT ADJUDICATED, NOT USED. erdosproblems.com/593 still carried
+the status OPEN on 2026-09-05 (see the sibling snapshot), and openness is the source's
+marking, never ours. This preprint is recorded here only so that a later session knows it
+exists and does not mistake this campaign's silence for ignorance of it.
+==============================================================================
+Mathematics > Combinatorics 
+ arXiv:2606.24882 (math)
+ [Submitted on 23 Jun 2026 ( v1 ), last revised 23 Jul 2026 (this version, v2)] 
+ Title: A Resolution of Erdős Problems 593 and 1177: Obligatory Triple Systems and Exact Spectra 
+ Authors: Eric Li (Trinity College, University of Cambridge) View a PDF of the paper titled A Resolution of Erd\H{o}s Problems 593 and 1177: Obligatory Triple Systems and Exact Spectra, by Eric Li (Trinity College and 1 other authors 
+ View PDF 
+ HTML (experimental) 
+ Abstract: We resolve Erdős Problems #593 and #1177. Problem #593 asks which finite triple systems occur in every uncountably chromatic triple system; the answer is exactly the class generated from private-vertex expansions of finite bipartite graphs by finite disjoint unions and one-point amalgamations. Equivalently, after isolated vertices are removed, a finite triple system is obligatory precisely when it is linear, every hyperedge-node of its Levi graph has an incident bridge, and every Berge cycle is even.
+ The proof uses an exact bridge-trace theorem for complete-rank one-apex sequence lifts. We also prove that, for every uncountable cardinal kappa, there is a linear triple system of chromatic number exactly kappa, with at most 2^{2^mu} vertices when kappa=mu^+. These two ingredients give a class-valued exact avoidance-spectrum dichotomy for every finite forbidden triple system. As a consequence, Erdős Problem #1177 has truth values yes, no, and yes. All results of this paper have been formally verified in Lean-4.
+ Comments: 
+ V2: all results formally verified in Lean 4. 23 pages, 1 figure 
+ Subjects: 
+ Combinatorics (math.CO) 
+ MSC classes: 
+ 05C65 (Primary), 05C15 (Secondary) 
+ Cite as: 
+ arXiv:2606.24882 [math.CO] 
+   
+ (or 
+ arXiv:2606.24882v2 [math.CO] for this version)
+   
+ https://doi.org/10.48550/arXiv.2606.24882 
+ Focus to learn more 
+ arXiv-issued DOI via DataCite 
+ Submission history From: Eric Li [ view email ] [v1] 
+ Tue, 23 Jun 2026 17:57:39 UTC (28 KB) 
+ [v2] 
+ Thu, 23 Jul 2026 05:42:12 UTC (29 KB) 
+ 

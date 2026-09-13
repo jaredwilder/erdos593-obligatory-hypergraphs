@@ -1,0 +1,91 @@
+{
+  "source_repo": "jaredwilder/erdos-campaign-archive",
+  "source_commit": "2f4c8e421137c53fd5d8414cabb3f543a3a12f55",
+  "source_prefix": "campaigns/erdos593-close-2026-09-05/",
+  "files": [
+    {
+      "source_path": "campaigns/erdos593-close-2026-09-05/Erdos593Audit.lean",
+      "destination": "research/Erdos593Audit.lean",
+      "bytes": 2137,
+      "source_blob": "6467df9cea3ca33acca23821f5e142706d94aa06",
+      "sha256": "e73240c96b1618fe57ab817144d21a64c97e226bba86921a53871826d38e68e2"
+    },
+    {
+      "source_path": "campaigns/erdos593-close-2026-09-05/Erdos593Forest.lean",
+      "destination": "research/Erdos593Forest.lean",
+      "bytes": 10068,
+      "source_blob": "9b4872a53f00de9e358a77b65a6c8a326cbd269d",
+      "sha256": "c15f3ac0d15f02171ec5964b5388e16dfdc0c71b2878ec3d5f11ce6c600480f1"
+    },
+    {
+      "source_path": "campaigns/erdos593-close-2026-09-05/Erdos593Frontier.lean",
+      "destination": "research/Erdos593Frontier.lean",
+      "bytes": 20939,
+      "source_blob": "0f9ac0703fe9ec118c691d8becb82d0e0b4d4ae7",
+      "sha256": "6d3acf91daa854cdac5a8ee7884794289d02744f41693ad01e8a10c13d4fa172"
+    },
+    {
+      "source_path": "campaigns/erdos593-close-2026-09-05/receipts/arxiv-2606.24882-claim-snapshot-2026-09-05.txt",
+      "destination": "research/receipts/arxiv-2606.24882-claim-snapshot-2026-09-05.txt",
+      "bytes": 2672,
+      "source_blob": "a3e2ec625788b60551da7fcd4f540806a67521e8",
+      "sha256": "1145133d0b74587c09bfd6f2bbbe67a22283b216a37e796eede65cb6c5acc5de"
+    },
+    {
+      "source_path": "campaigns/erdos593-close-2026-09-05/receipts/axioms-audit.log",
+      "destination": "research/receipts/axioms-audit.log",
+      "bytes": 2631,
+      "source_blob": "8bfd5dd95eb54e1535fc92f3066153dc321ef041",
+      "sha256": "55cdf7a91b1a449f2fc7746e6e19f912d0d1dea45b77e25b01303922296c7129"
+    },
+    {
+      "source_path": "campaigns/erdos593-close-2026-09-05/receipts/build-forest.log",
+      "destination": "research/receipts/build-forest.log",
+      "bytes": 0,
+      "source_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source_path": "campaigns/erdos593-close-2026-09-05/receipts/build-frontier.log",
+      "destination": "research/receipts/build-frontier.log",
+      "bytes": 0,
+      "source_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source_path": "campaigns/erdos593-close-2026-09-05/receipts/build.sh",
+      "destination": "research/receipts/build.sh",
+      "bytes": 314,
+      "source_blob": "419ecf3c39302ed1c1651f7133519e3e720abd61",
+      "sha256": "935cf7d5f7fdc0c2f3cfadbe209f4fc352bad7d1a6e1ce133875bbf7fa665b9f"
+    },
+    {
+      "source_path": "campaigns/erdos593-close-2026-09-05/receipts/campaign.json",
+      "destination": "research/receipts/campaign.json",
+      "bytes": 23098,
+      "source_blob": "c0ce39d67a1fb2ddfd23bd8b39f09b43c36e7d56",
+      "sha256": "653eeccea2c9f43e8ef45658175d402f79e5ce20a96858c7a6c9371b9128a838"
+    },
+    {
+      "source_path": "campaigns/erdos593-close-2026-09-05/receipts/erdosproblems-593-snapshot-2026-09-05.txt",
+      "destination": "research/receipts/erdosproblems-593-snapshot-2026-09-05.txt",
+      "bytes": 2181,
+      "source_blob": "d0aceaf7da36befee892925e08590d465ed76d7b",
+      "sha256": "4340747576472a558bdd5068741cafd6662b6eaf6ada680d075eb941bf41f97a"
+    },
+    {
+      "source_path": "campaigns/erdos593-close-2026-09-05/receipts/reiher-2403.11223-snapshot-2026-09-05.txt",
+      "destination": "research/receipts/reiher-2403.11223-snapshot-2026-09-05.txt",
+      "bytes": 8107,
+      "source_blob": "10590380fb0decf264fd0458a3ae5f07a5c5d470",
+      "sha256": "2f5cfabd5226dec14dbb58ff66ea97bb8e90384c3e7dd60bea169d63c9d69765"
+    },
+    {
+      "source_path": "LICENSE",
+      "destination": "LICENSE",
+      "bytes": 11358,
+      "source_blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    }
+  ]
+}

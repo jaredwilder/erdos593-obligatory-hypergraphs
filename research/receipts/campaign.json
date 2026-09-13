@@ -1,0 +1,183 @@
+{
+  "schema": "oracle.campaign.v1",
+  "campaign": "erdos593-close-2026-09-05",
+  "target": "erdos:593",
+  "targetSource": "erdosproblems.com community database (teorth/erdosproblems)",
+  "prize": "$500",
+  "tags": ["set theory", "graph theory", "hypergraphs", "chromatic number"],
+  "statementUrl": "https://www.erdosproblems.com/593",
+  "statement": "Characterize those finite 3-uniform hypergraphs which appear in every 3-uniform hypergraph of chromatic number > aleph_0.",
+
+  "verdict": "NOT_CLOSED",
+  "verdictNote": "Erdos 593 is NOT resolved by this campaign, and nothing here changes the source's OPEN marking. What IS banked, all kernel-checked and sorry-free: (a) the conjectural characterization recorded in the CANONICAL formalisation of this problem -- google-deepmind/formal-conjectures FormalConjectures/ErdosProblems/593.lean, the file erdosproblems.com/593 itself links to as its 'Formalised statement' -- is FALSE, refuted three independent ways, with the finite-combinatorial half of each refutation proved here by computation; (b) the correct answer terms for that file's three answer(sorry) slots, modulo named literature; (c) a three-link frontier chain with all three containments proved STRICT and a finite witness supplied for each; (d) the first sorry-free non-degenerate obligatory instance; (e) four reusable lemmas stated against the formal-conjectures encoding verbatim. No new mathematics about the open characterization was produced.",
+
+  "priorEstateWork": {
+    "found": true,
+    "value": "NONE_USABLE",
+    "artifacts": [
+      "oracle/evidence/rapid-fire/corpus-erdos-593-operator-20260730T093514Z.json",
+      "oracle/evidence/rapid-fire/corpus-erdos-593-operator-20260730T093514Z-routed.json",
+      "oracle/evidence/rapid-fire/corpus-formal-593-operator-20260730T135859Z-routed.json"
+    ],
+    "assessment": "One rapid-fire run, 2026-07-30, google/gemini-3.5-flash-lite, spentUsd 0.086544. It routed erdos:593 and then attacked a FINITE subset-avoidance problem at n = 20 ('max_subset_avoiding_hypergraph_disjoint', size 11, optimal true) -- a different question from the infinite chromatic-number one, which cannot be decided by any finite computation (the erdosproblems page says so in its own status line). The routed summary records novelCount 0, bankedFindings [], bankedArmory [], crossVerification 'no verifier for domain corpus-erdos-593', and 13 wiringGaps. The companion corpus-formal-593 run has no receipt at all ('receipt not found'). Net prior estate progress on erdos:593 before this campaign: zero.",
+    "leanCopiesInTree": "Five byte-identical copies of the upstream 593.lean sit in the tree (oracle/acquisition/formal-conjectures/..., oracle/math/EG411Formal/..., oracle/evidence/targets/lean-sources/..., oracle/reality/frontier_arsenal/bladeforge/frontier100/source_snapshot/..., plus two masked qualification cases). None had been attacked."
+  },
+
+  "literature": {
+    "primarySource": {
+      "citation": "Christian Reiher, 'Obligatory hypergraphs', arXiv:2403.11223v1 [math.CO], 17 Mar 2024, Section 1 (CC BY 4.0)",
+      "snapshotFile": "receipts/reiher-2403.11223-snapshot-2026-09-05.txt",
+      "snapshotSha256": "2f5cfabd5226dec14dbb58ff66ea97bb8e90384c3e7dd60bea169d63c9d69765",
+      "why": "A 2024 published account whose introduction states the whole known frontier of this problem with attributions. EVERY literature attribution in this campaign is taken from it; no attribution was reconstructed from memory."
+    },
+    "problemPageSnapshot": {
+      "file": "receipts/erdosproblems-593-snapshot-2026-09-05.txt",
+      "sha256": "4340747576472a558bdd5068741cafd6662b6eaf6ada680d075eb941bf41f97a",
+      "retrieved": "2026-09-05",
+      "citation": "T. F. Bloom, Erdos Problem #593, https://www.erdosproblems.com/593, accessed 2026-09-05",
+      "statusLine": "OPEN -- 'This is open, and cannot be resolved with a finite computation.' -- $500",
+      "pageAlsoSays": "'Similar problems were investigated by Erdos, Galvin, and Hajnal [EGH75]. Erdos claims that for graphs the problem is completely solved: a graph of chromatic number >= aleph_1 must contain all finite bipartite graphs but need not contain any fixed odd cycle.'",
+      "formalisedStatement": "Yes -- the page links to https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/593.lean, which is exactly the file this campaign audits.",
+      "notRetrieved": "The page shows 'Comments (1)' and 'Proof claims (2)'. Both are loaded dynamically; only the counts are in the snapshot. Three guessed API endpoints returned 404. Their contents were NOT retrieved and are NOT relied on anywhere."
+    },
+    "facts": [
+      {"id": "EH66", "who": "Erdos-Hajnal, Acta Math. Acad. Sci. Hungar. 17 (1966) 61-99 (Cor 5.6 + Thm 7.4)", "claim": "A finite GRAPH is obligatory iff it is bipartite.", "sign": "settled, graph case only"},
+      {"id": "EHR73", "who": "Erdos-Hajnal-Rothschild", "claim": "A hypergraph with two edges meeting in >= 2 vertices is NON-obligatory. Equivalently obligatory => LINEAR.", "sign": "necessary condition"},
+      {"id": "EGH75", "who": "Erdos-Galvin-Hajnal, Colloq. Math. Soc. Janos Bolyai 10 (1975) 425-513, Thm 11.6", "claim": "C_3^(3), the 3-uniform expansion of a triangle, is NON-obligatory.", "sign": "negative instance"},
+      {"id": "Ko01", "who": "Komjath, Combinatorica 21 (2001) 233-238, as extended in Reiher Section 1", "claim": "Every obligatory k-uniform hypergraph is k-PARTITE; the obligatory class is closed under disjoint unions and one-point amalgamations; every finite loose forest is obligatory.", "sign": "necessary condition + positive class"},
+      {"id": "Re24", "who": "Reiher, arXiv:2403.11223, Thm 1.2", "claim": "K_{n,n}^(k) is obligatory for all k >= 2, n >= 1. Hence C_4^(3) = K_{2,2}^(3) is obligatory.", "sign": "positive instance"},
+      {"id": "Re24-state", "who": "Reiher, Section 1, verbatim", "claim": "'For general hypergraphs no comparable result is known, and no plausible conjecture has ever been proposed.' And: 'it has never been shown that for any k >= 3 there exists an obligatory, k-uniform hypergraph which fails to be a forest' (which Thm 1.2 then fixes).", "sign": "state of the art as of Mar 2024"},
+      {"id": "adjacent", "who": "Hajnal-Komjath, Acta Math. Hungar. 119 (2008) 1-13; Komjath, Acta Math. Hungar. 121 (2008) 79-92", "claim": "'Obligatory subsystems of triple systems' and 'An uncountably chromatic triple system' -- the two further papers Reiher cites on this exact problem.", "sign": "NOT READ by this campaign; listed so the next session knows where to go"}
+    ],
+    "unadjudicatedResolutionClaim": {
+      "citation": "Eric Li (Trinity College, Cambridge) et al., 'A Resolution of Erdos Problems 593 and 1177: Obligatory Triple Systems and Exact Spectra', arXiv:2606.24882, v1 2026-06-23, v2 2026-07-23",
+      "snapshotFile": "receipts/arxiv-2606.24882-claim-snapshot-2026-09-05.txt",
+      "snapshotSha256": "1145133d0b74587c09bfd6f2bbbe67a22283b216a37e796eede65cb6c5acc5de",
+      "claimedAnswer": "obligatory (after removing isolated vertices) iff linear, every hyperedge-node of the Levi graph has an incident bridge, and every Berge cycle is even; abstract also claims 'All results of this paper have been formally verified in Lean-4'.",
+      "status": "NOT ADJUDICATED AND NOT USED. Only the abstract page was fetched; the paper was not read and its Lean artefacts were not located or checked. erdosproblems.com/593 still carried the status OPEN on 2026-09-05 and lists 2 unaccepted proof claims. Openness is the source's marking, never ours, so this campaign treats 593 as open. Recorded here ONLY so a later session does not mistake silence for ignorance.",
+      "consistencyNote": "The claimed characterization is at least CONSISTENT with everything proved here: it forces linearity (matching EHR73), it makes C_3^(3) non-obligatory (odd Berge cycle, matching EGH75) and C_4^(3) obligatory (even, matching Re24), and it is strictly stronger than Property B (matching this campaign's separation witness). Consistency is not verification."
+    }
+  },
+
+  "findings": [
+    {
+      "id": "F1",
+      "kind": "CORRECTNESS_WARNING",
+      "status": "PROVED (each variant conditional on ONE named literature verdict, carried as an explicit hypothesis)",
+      "headline": true,
+      "claim": "The 'natural conjectural characterization' recorded in google-deepmind/formal-conjectures FormalConjectures/ErdosProblems/593.lean -- that the obligatory finite 3-uniform hypergraphs are exactly the 2-colorable ones (Property B) -- is FALSE. Three independent published theorems each refute it, and the finite-combinatorial half of each refutation is proved here by computation. The three answer(sorry) slots of that file therefore resolve to: obligatory_implies_two_colorable := True, two_colorable_implies_obligatory := False, erdos_593 := False.",
+      "why": "That file is the formalisation erdosproblems.com/593 itself links to. Its own docstring frames Property B as 'A natural conjectural characterization'; Reiher's 2024 survey says in as many words that 'no plausible conjecture has ever been proposed'. A formaliser who discharges those slots by analogy with the graph case (bipartite <-> obligatory) commits TWO false answer terms. This is the same failure mode as the Galvin-Larson TODO in 592.lean, and it is now checked instead of guessed.",
+      "lean": [
+        "Erdos593.sufficientDirection_false_of_EGH",
+        "Erdos593.sufficientDirection_false_of_Komjath",
+        "Erdos593.sufficientDirection_false_of_EHR",
+        "Erdos593.characterization_false_of_EGH",
+        "Erdos593.characterization_false_of_Komjath",
+        "Erdos593.characterization_false_of_EHR",
+        "Erdos593.necessaryDirection_true_of_Komjath"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "SEPARATION",
+      "status": "PROVED (unconditional, no literature input)",
+      "claim": "K_4^(3) -- all four triples on four vertices -- is 2-colorable, is NOT 3-partite, and is NOT linear. So Property B is strictly weaker than each of the two necessary conditions the literature already establishes for obligatory hypergraphs. The two classes in the formal-conjectures conjecture are provably different objects, independently of whether either literature theorem is believed.",
+      "why": "This is the only part of the refutation that needs no literature at all: it says the conjecture is not merely unproved, its two sides are separated by a five-line computation. The 3-partite failure is pigeonhole (4 vertices, 3 classes, and every pair of vertices lies in a common triple); the linearity failure is {0,1,2} meeting {0,1,3} twice.",
+      "lean": ["Erdos593.K4exp_twoColorable", "Erdos593.K4exp_not_threePartite", "Erdos593.K4exp_not_linear", "Erdos593.outer_containment_strict"]
+    },
+    {
+      "id": "F3",
+      "kind": "FRONTIER_PINNED",
+      "status": "PROVED (containments conditional on the named literature verdicts; every witness property unconditional)",
+      "claim": "The published state of Erdos 593 is the chain   loose forests  (<)  OBLIGATORY  (<)  linear AND 3-partite  (<)  2-colorable,  and ALL THREE containments are STRICT, with finite witnesses C_4^(3), C_3^(3), K_4^(3) respectively. Every property of every witness -- linear, 3-partite, 2-colorable, not-3-partite, not-linear, not-a-loose-forest -- is proved by computation in this development. The only imported facts are the four named hypotheses [Re24], [EGH75], [Ko01], [EHR73].",
+      "why": "It says exactly where the open problem lives: not 'somewhere between forests and Property B' but strictly inside a gap with a named witness at each end. In particular the class the formal-conjectures file conjectures is separated from the obligatory class by TWO strict containments, not zero.",
+      "lean": ["Erdos593.frontier_pinned", "Erdos593.lower_containment_strict", "Erdos593.upper_containment_strict", "Erdos593.outer_containment_strict"]
+    },
+    {
+      "id": "F4",
+      "kind": "ATTACK_RULED_OUT",
+      "status": "PROVED (conditional on [EGH75], carried as an explicit hypothesis)",
+      "claim": "C_3^(3) is LINEAR and 3-PARTITE (both proved here by computation) and, by [EGH75] Thm 11.6, NOT obligatory. Therefore no combination or strengthening of [EHR73] and [Ko01] -- the only two necessary conditions in the literature -- can characterise the obligatory class. Any successful attack on 593 must introduce an obstruction that is invisible to both linearity and k-partiteness.",
+      "why": "The two known necessary conditions are the obvious things to try to push to a characterisation. This closes that route with a six-vertex witness, and it says what a correct answer must look like: whatever the right condition is, it must separate C_3^(3) from C_4^(3), i.e. it must see the PARITY of the cycle, exactly as the graph case does (bipartite = no odd cycle).",
+      "lean": ["Erdos593.C3exp_linear", "Erdos593.C3exp_threePartite", "Erdos593.upper_containment_strict"]
+    },
+    {
+      "id": "F5",
+      "kind": "REUSABLE_INFRASTRUCTURE",
+      "status": "PROVED (unconditional)",
+      "claim": "(i) twoColorable_of_threePartite: 3-partite => 2-colorable, stated against the formal-conjectures IsTwoColorable verbatim. This is what turns [Ko01] into a proof of the file's obligatory_implies_two_colorable slot. (ii) not_looseForest_of_all_heavy: a general peeling obstruction -- if every hyperedge contains two distinct vertices each lying on some OTHER hyperedge, the hypergraph is not a loose forest. (iii) subset_foldr_union. (iv) edges_nonempty_of_large_chromatic, restated so it is available outside the upstream file.",
+      "why": "(i) and (ii) are the two general lemmas; everything else in the campaign is a witness computation feeding them. (ii) is the reusable way to certify 'not a loose forest' for ANY finite hypergraph without enumerating orderings -- the naive route is 4! = 24 cases for C_4^(3) alone and combinatorially worse after that.",
+      "lean": ["Erdos593.twoColorable_of_threePartite", "Erdos593.not_looseForest_of_all_heavy", "Erdos593.subset_foldr_union", "Erdos593.edges_nonempty_of_large_chromatic"]
+    },
+    {
+      "id": "F6",
+      "kind": "INSTANCE_PROVED",
+      "status": "PROVED (unconditional)",
+      "claim": "A single hyperedge is obligatory. formal-conjectures 593.lean proves only that the EMPTY hypergraph is obligatory; this is the first non-degenerate rung, and it is the base case of the loose-forest induction of [Ko01].",
+      "why": "As far as this campaign could determine it is the only sorry-free NON-TRIVIAL obligatory instance anywhere in the Lean ecosystem: every theorem in the upstream 593.lean about obligatoriness is either `sorry` or about the empty hypergraph. Combined with the upstream obligatory_monotone it gives a real, if short, ladder.",
+      "lean": ["Erdos593.oneEdge_obligatory"]
+    },
+    {
+      "id": "F7",
+      "kind": "DEFINITIONS_SUPPLIED",
+      "status": "PROVED (they typecheck and are used)",
+      "claim": "IsThreePartite, IsLinear and IsLooseForest are defined against the formal-conjectures ThreeUniformHypergraph encoding. The upstream file defines none of them, which is why its docstring reaches for Property B: 2-colorability is the only hypergraph condition it has a name for.",
+      "why": "Naming the right conditions is most of the reason the wrong conjecture got recorded. IsLooseForest is deliberately MORE PERMISSIVE than the literature's (any list whose element set is F.edges, duplicates allowed), so `not IsLooseForest F` proved here is at least as strong as the literature's non-forest claim.",
+      "lean": ["Erdos593.IsThreePartite", "Erdos593.IsLinear", "Erdos593.IsLooseForest"]
+    }
+  ],
+
+  "unproved": [
+    {"claim": "[EH66], [EHR73], [EGH75], [Ko01], [Re24] -- every literature verdict", "status": "UNPROVED HERE", "note": "Carried as explicitly named hypotheses everywhere they are used. This campaign proves NONE of them and asserts none of them; they are literature attributions only, all taken from the Reiher snapshot."},
+    {"claim": "The characterization itself -- what the obligatory finite 3-uniform hypergraphs ARE", "status": "UNPROVED", "note": "No progress. The frontier says where the problem is, not what the answer is. The prize is unclaimed."},
+    {"claim": "arXiv:2606.24882's claimed resolution", "status": "NOT ADJUDICATED", "note": "Abstract page fetched and snapshotted; paper not read, its claimed Lean verification not located or checked. No feasibility or plausibility judgement was made either way."},
+    {"claim": "NON-VACUITY of the formal-conjectures encoding: that some H : ThreeUniformHypergraph V with V : Type (universe 0) actually has aleph_0 < H.chromaticCardinal", "status": "UNPROVED, AND UNPROVED ANYWHERE IN THE ECOSYSTEM", "note": "This is a real unformalised obligation sitting under the whole file. If no such H existed, IsObligatory would hold VACUOUSLY of every F, SufficientDirection would be TRUE and NecessaryDirection FALSE -- i.e. the vacuous world inverts which slot is refutable. This campaign is not exposed to that risk: each refutation's hypothesis (e.g. `not IsObligatory C3exp`) itself IMPLIES non-vacuity, so every theorem here is an honest conditional. But a formaliser filling the answer slots directly MUST discharge this existence obligation first. Erdos-Hajnal supply the mathematics; nobody has supplied the Lean."},
+    {"claim": "Anything about the two 2008 papers (Hajnal-Komjath, Komjath) Reiher cites", "status": "NOT READ", "note": "They are the obvious next literature step and were not opened."}
+  ],
+
+  "artifacts": [
+    {"path": "Erdos593Frontier.lean", "sha256": "6d3acf91daa854cdac5a8ee7884794289d02744f41693ad01e8a10c13d4fa172", "bytes": 20939, "build": "EXIT=0", "note": "the formal-conjectures encoding inlined verbatim, the two literature properties, the witnesses C_3^(3) / K_4^(3) / oneEdge, the correctness warning, the unconditional obligatory instance"},
+    {"path": "Erdos593Forest.lean", "sha256": "c15f3ac0d15f02171ec5964b5388e16dfdc0c71b2878ec3d5f11ce6c600480f1", "bytes": 10068, "build": "EXIT=0", "note": "loose forests, the peeling obstruction, the witness C_4^(3), the full frontier chain"},
+    {"path": "Erdos593Audit.lean", "sha256": "e73240c96b1618fe57ab817144d21a64c97e226bba86921a53871826d38e68e2", "bytes": 2137, "build": "EXIT=0", "note": "#print axioms over all 30 banked results"},
+    {"path": "receipts/axioms-audit.log", "sha256": "55cdf7a91b1a449f2fc7746e6e19f912d0d1dea45b77e25b01303922296c7129", "bytes": 2631},
+    {"path": "receipts/build-frontier.log", "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "bytes": 0, "note": "empty: clean compile, no diagnostics, not even a deprecation warning"},
+    {"path": "receipts/build-forest.log", "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "bytes": 0, "note": "empty: clean compile, no diagnostics"},
+    {"path": "receipts/erdosproblems-593-snapshot-2026-09-05.txt", "sha256": "4340747576472a558bdd5068741cafd6662b6eaf6ada680d075eb941bf41f97a", "bytes": 2181},
+    {"path": "receipts/reiher-2403.11223-snapshot-2026-09-05.txt", "sha256": "2f5cfabd5226dec14dbb58ff66ea97bb8e90384c3e7dd60bea169d63c9d69765", "bytes": 8107},
+    {"path": "receipts/arxiv-2606.24882-claim-snapshot-2026-09-05.txt", "sha256": "1145133d0b74587c09bfd6f2bbbe67a22283b216a37e796eede65cb6c5acc5de", "bytes": 2672},
+    {"path": "receipts/build.sh", "note": "the exact build command used on the Lean box, copied back verbatim"}
+  ],
+
+  "auditedUpstream": [
+    {"path": "oracle/acquisition/formal-conjectures/FormalConjectures/ErdosProblems/593.lean", "sha256": "0f783c4b8b411422cbba0fa75f1c7e153dabfbb1e93710d0935a9a4747bbcd19", "bytes": 10216, "note": "the file whose recorded conjecture F1 refutes; 5 byte-identical copies exist in this tree"},
+    {"path": "oracle/acquisition/formal-conjectures/FormalConjecturesForMathlib/Combinatorics/Hypergraph/ThreeUniform.lean", "sha256": "6a1d6b90493beb079382b02680b438acbd893f2f0539bab0cbb607723a3a2db3", "bytes": 4963, "note": "the encoding inlined verbatim into Erdos593Frontier.lean Section 1"}
+  ],
+
+  "axiomAudit": {
+    "receipt": "receipts/axioms-audit.log",
+    "checked": 30,
+    "allowedAxioms": ["propext", "Classical.choice", "Quot.sound"],
+    "sorryAxFound": 0,
+    "result": "PASS -- every one of the 30 banked results depends only on [propext, Classical.choice, Quot.sound]; eight of them (the pure `decide` computations) do not even use Classical.choice. There is no occurrence of `sorry` in any of the three .lean sources outside comments quoting the upstream `answer(sorry)` terms.",
+    "reproduce": "scp the three .lean files to the Lean box, then: /root/e593/build.sh Erdos593Frontier && /root/e593/build.sh Erdos593Forest && /root/e593/build.sh Erdos593Audit && cat /root/e593/Erdos593Audit.log"
+  },
+
+  "compute": {
+    "leanBox": "root@51.158.234.15",
+    "leanToolchain": "leanprover/lean4:v4.31.0-rc1",
+    "mathlibCommit": "919544d4309104b3f19724b0e6e48c701d27948f",
+    "mathlibRoot": "/root/formalizer/proofs",
+    "workDir": "/root/e593",
+    "policy": "nice -n 19, taskset -c 2,3 (two cores, disjoint from the 592 campaign's 0,1); no existing jobs killed; box load average ~31-35 throughout; 24 GB of 125 GB free at start",
+    "localHeavyCompute": "none",
+    "llmSpend": "none -- no model was called by this campaign"
+  },
+
+  "nextMoves": [
+    "Read Hajnal-Komjath, Acta Math. Hungar. 119 (2008) 1-13 'Obligatory subsystems of triple systems' and Komjath, Acta Math. Hungar. 121 (2008) 79-92. They are the two papers Reiher cites that this campaign did not open, and they are the only remaining pre-2024 literature on exactly this problem.",
+    "Adjudicate arXiv:2606.24882 properly: locate its claimed Lean-4 artefacts and run them. If they are real and sorry-free, the problem is closed by someone else and the estate should say so; if they are not, that is itself worth recording. Either way the finite witnesses banked here are a ready-made test battery -- any correct characterization must classify C_4^(3) obligatory, C_3^(3) not obligatory, and K_4^(3) not obligatory.",
+    "Discharge the non-vacuity obligation in Lean (an H over a Type-0 vertex set with chromaticCardinal > aleph_0). It is a prerequisite for filling ANY of the three answer(sorry) slots directly, and nothing in the ecosystem has it.",
+    "Formalise [Ko01]'s closure properties (disjoint unions, one-point amalgamations) on top of oneEdge_obligatory and the upstream obligatory_monotone. That would make every finite loose forest obligatory in Lean and give the lower edge of the frontier chain unconditionally, without needing [Ko01] as a hypothesis.",
+    "Push the correctness warning upstream: the three answer(sorry) slots in google-deepmind/formal-conjectures 593.lean should be True / False / False, and the docstring's 'natural conjectural characterization' framing should be replaced by the actual literature frontier."
+  ]
+}

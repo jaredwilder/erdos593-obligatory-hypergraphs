@@ -1,0 +1,113 @@
+SNAPSHOT of https://arxiv.org/html/2403.11223v1  (SECTION 1 + REFERENCES ONLY)
+Christian Reiher, 'Obligatory hypergraphs', arXiv:2403.11223v1 [math.CO], 17 Mar 2024.
+License: CC BY 4.0 (as stated on the arXiv HTML page).
+retrieved 2026-09-05 by curl (HTML -> text; LaTeXML duplicates each formula as
+rendered-then-source, which is why maths appears twice).
+THIS IS THE SOLE LITERATURE SOURCE for every attribution in the campaign's Lean files.
+==============================================================================
+1. Introduction 
+ For an integer k ≥ 2 k\geq 2 a k k -uniform hypergraph is a pair H = ( V , E ) H=(V,E) consisting
+of a (finite or infinite) set of vertices V V and a
+set E ⊆ V ( k ) = { e ⊆ V : | e | = k } E\subseteq V^{(k)}=\{e\subseteq V\colon|e|=k\} of k k -element subsets
+of V V , called the edges of H H .
+The chromatic number of a hypergraph H = ( V , E ) H=(V,E) , denoted by χ ⁡ ( H ) \chi(H) , is the
+least cardinal κ \kappa for which there exists a colouring f : V ⟶ κ f\colon V\longrightarrow\kappa such
+that no edge of H H is monochromatic with respect to f f . A finite hypergraph F F is
+said to be obligatory if every hypergraph H H with χ ⁡ ( H ) ≥ ℵ 1 \chi(H)\geq\aleph_{1} has
+a subhypergraph isomorphic to F F .
+Erdős and Hajnal [ 3 ] *Corollary 5.6 and Theorem 7.4 obtained the
+following characterisation of obligatory graphs. 
+ Theorem 1.1 (Erdős and Hajnal) . 
+ A finite graph is obligatory if and only if it is bipartite. ∎ 
+ For general hypergraphs no comparable result is known, and no plausible conjecture
+has ever been proposed. The earliest contribution to this area we are aware
+of is due to Erdős, Hajnal, and Rothschild [ 2 ] , who showed that
+hypergraphs with two edges intersecting in two or more vertices are non-obligatory.
+A systemstic study of the 3 3 -uniform case was initiated by
+Erdős, Galvin, and Hajnal [ 1 ] , and later continued by
+Komjáth [ 5 , 6 , 4 ] . Many results from [ 5 ] can be
+extended in a straightforward manner to k k -uniform hypergraphs. For instance,
+every obligatory k k -uniform hypergraph is k k -partite, and the class of obligatory,
+ k k -uniform hypergraphs is closed under taking disjoint unions and one-point
+amalgamations. In particular, every finite forest is obligatory, i.e., every finite
+hypergraph F F whose set of edges admits an enumeration E ⁡ ( F ) = { e 0 , … , e n − 1 } E(F)=\{e_{0},\dots,e_{n-1}\} 
+such that | e i ∩ ⋃ j < i e j | ≤ 1 \big|e_{i}\cap\bigcup_{j<i}e_{j}\big|\leq 1 holds for every positive i < n i<n .
+To the best of our knowledge, however, it has never been shown that for any k ≥ 3 k\geq 3 
+there exists an obligatory, k k -uniform hypergraph which fails to be a forest. 
+ The goal of this article is to describe a natural class of obligatory hypergraphs
+that generalise bipartite graphs. Given an arbitrary graph F F and an integer k k 
+the expansion F ( k ) F^{(k)} is defined to be the k k -uniform hypergraph derived
+from F F by adding k − 2 k-2 new vertices to every edge; thus it has | V ⁡ ( F ) | + ( k − 2 ) ​ | E ⁡ ( F ) | |V(F)|+(k-2)|E(F)| 
+vertices and there is a bijection φ : E ⁡ ( F ) ⟶ E ⁡ ( F ( k ) ) \varphi\colon E(F)\longrightarrow E(F^{(k)}) such that
+ e ⊆ φ ⁡ ( e ) e\subseteq\varphi(e) and e ∩ e ′ = φ ⁡ ( e ) ∩ φ ⁡ ( e ′ ) e\cap e^{\prime}=\varphi(e)\cap\varphi(e^{\prime}) hold for all distinct
+ e , e ′ ∈ E ⁡ ( F ) e,e^{\prime}\in E(F) . Hypergraph expansions were introduced about twenty years ago by
+Mubayi in his work on the hypergraph Turán problem [ 7 ] .
+A few examples of the construction are displayed in Figure 1.1 . 
+ (a) C 3 ( 3 ) C_{3}^{(3)} 
+ (b) C 4 ( 4 ) C_{4}^{(4)} 
+ (c) K 2 , 3 ( 3 ) K^{(3)}_{2,3} 
+ Figure 1.1 . Some expansions 
+ In the result that follows, K n , n K_{n,n} refers to the complete bipartite graph
+with n n vertices in each of its vertex classes, and K n , n ( k ) K^{(k)}_{n,n} denotes
+its k k -uniform expansion. 
+ Theorem 1.2 . 
+ For all integers k ≥ 2 k\geq 2 and n ≥ 1 n\geq 1 the k k -uniform hypergraph K n , n ( k ) K^{(k)}_{n,n} 
+is obligatory. 
+ In particular, for every even ℓ ≥ 4 \ell\geq 4 the expanded ℓ \ell -cycle C ℓ ( k ) C^{(k)}_{\ell} 
+is obligatory. The hypergraph C 3 ( 3 ) C^{(3)}_{3} , on the other hand, was shown to be
+non-obligatory by Erdős, Galvin, and Hajnal [ 1 ] *Theorem 11.6.
+A perhaps gentler introduction to obligatory hypergraphs can be found in
+our recent survey [ 8 ] *§3. 
+ 
+
+----- REFERENCES -----
+References 
+ License: CC BY 4.0
+arXiv:2403.11223v1 [math.CO] 17 Mar 2024 
+ Obligatory hypergraphs 
+ Christian Reiher
+ Address: Fachbereich Mathematik, Universität Hamburg, Hamburg, Germany
+ Email address: christian.reiher@uni-hamburg.de 
+ Abstract. 
+ Erdős and Hajnal proved that every graph of uncountable chromatic number
+contains arbitrarily large finite, complete, bipartite graphs. We extend this
+result to hypergraphs. 
+ Key words and phrases: chromatic number, infinite hypergraphs
+ 2010 Mathematics Subject Classification 03E05, 05C15, 05D10
+ 1. Introduction 
+ For an integer k ≥ 2 k\geq 2 a k k -uniform hypergraph is a pair H = ( V , E ) H=(V,E) consisting
+of a (finite or infinite) set of vertices V V and a
+set E ⊆ V ( k ) = { e ⊆ V : | e | = k } E\subseteq V^{(k)}=\{e\subseteq V\colon|e|=k\} of k k -element subsets
+of V V , called the edges of H H .
+The chromatic number of a hypergraph H = ( V , E ) H=(V,E) , denoted by χ ⁡ ( H ) \chi(H) , is the
+least cardinal κ \kappa for which there exists a colouring f : V ⟶ κ f\colon V\longrightarrow\kappa such
+that no edge of H H is monochromatic with respect to f f . A finite hypergraph F F is
+said to be obligatory if every hypergraph H H with χ ⁡ ( H ) ≥ ℵ 1 \chi(H)\geq\aleph_{1} has
+a subhypergraph isomorphic to F F .
+Erdős and Hajnal [ 3 ] *Corollary 5.6 and Theorem 7.4 obtained the
+following characterisation of obligatory graphs. 
+ Theorem 1.1 (Erdős and Hajnal) . 
+ A finite graph is obligatory if and only if it is bipartite. ∎ 
+ For general hypergraphs no comparable result is known, and no plausible conjecture
+has ever been proposed. The earliest contribution to this area we are aware
+of is due to Erdős, Hajnal, and Rothschild [ 2 ] , who showed that
+hypergraphs with two edges intersecting in two or more vertices are non-obligatory.
+A systemstic study of the 3 3 -uniform case was initiated by
+Erdős, Galvin, and Hajnal [ 1 ] , and later continued by
+Komjáth [ 5 , 6 , 4 ] . Many results from [ 5 ] can be
+extended in a straightforward manner to k k -uniform hypergraphs. For instance,
+every obligatory k k -uniform hypergraph is k k -partite, and the class of obligatory,
+ k k -uniform hypergraphs is closed under taking disjoint unions and one-point
+amalgamations. In particular, every finite forest is obligatory, i.e., every finite
+hypergraph F F whose set of edges admits an enumeration E ⁡ ( F ) = { e 0 , … , e n − 1 } E(F)=\{e_{0},\dots,e_{n-1}\} 
+such that | e i ∩ ⋃ j < i e j | ≤ 1 \big|e_{i}\cap\bigcup_{j<i}e_{j}\big|\leq 1 holds for every positive i < n i<n .
+To the best of our knowledge, however, it has never been shown that for any k ≥ 3 k\geq 3 
+there exists an obligatory, k k -uniform hypergraph which fails to be a forest. 
+ The goal of this article is to describe a natural class of obligatory hypergraphs
+that generalise bipartite graphs. Given an arbitrary graph F F and an integer k k 
+the expansion F ( k ) F^{(k)} is defined to be the k k -uniform hypergraph derived
+from F F by adding k − 2 k-2 new vertices to every edge; thus it has | V ⁡ ( F ) | + ( k − 2 ) ​ | E ⁡ ( F ) | |V(F)|+(k-2)|E(F)| 
+vertices and there is a bijection φ : E ⁡ ( F ) ⟶ E ⁡ ( F ( k ) ) \varphi\colon E(F)\longrightarrow E(F^{(k)}) such that
+ e ⊆ φ ⁡ ( e ) e\subseteq\varphi(e) and e ∩ e ′ = φ ⁡ ( e ) ∩ φ ⁡ ( e ′ ) e\cap e^{\prime}=\varphi(e)\cap\varphi(e^{\prime}) hold for all distinct
+ e , e ′ ∈ E ⁡ ( F ) e,e^{\prime}\in E(F) . Hypergraph expansions were introduced about twenty years ago by
+Mubayi in his work o
